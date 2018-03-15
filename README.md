@@ -1,3 +1,8 @@
+来源知乎
+https://www.zhihu.com/question/25536695?q=RPC
+洪春涛
+小而精的RPC库 tinyrpc（hjk41/tinyrpc），对于理解RPC如何工作很有好处。
+
 tinyrpc
 =======
 
