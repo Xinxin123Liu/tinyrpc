@@ -32,3 +32,18 @@ Programming interface
 ```
 
 Please refer to [/test/test.cpp](/test/test.cpp) for an example on how to use tinyrpc.
+
+
+github上有那些适合学习的MPI项目？
+洪春涛
+做系统的
+8 人赞同了该回答
+MPI的同步通信用的还是最多的，用起来也很简单，就是send/recv，bcast，barrier，这些查一下手册就好
+
+我很早以前拿MPI实现过rpc，主要靠MPI_Iprobe，有兴趣可以看看：https://github.com/hjk41/tinyrpc/blob/302a23d33a27e0e42a550cbc47075a2370315eb9/TinyRPC/tinycomm.cpp
+
+isend/irecv这些异步的容易搞错，偶尔用用就好。有iprobe其实就够实现 master/slave了，没必要非用isend/irecv
+
+
+
+MPI程序难点一般在逻辑，而不在MPI本身，MPI本身太过低级，所以api并不复杂。很多人觉得mpi复杂是因为在接触mpi之前没有接触过多进程编程，甚至连多线程编程都没接触过。如果只是学mpi，最有效率的方法还是直接去找个实际问题，上手敲代码
